@@ -65,7 +65,7 @@ const configuration: webpack.Configuration = {
 		__dirname: false,
 		__filename: false,
 	},
-
+	// 这里设置Webpack是否监听文件变化，如果为true，Webpack会在文件发生变化时重新构建
 	watch: true,
 };
 
