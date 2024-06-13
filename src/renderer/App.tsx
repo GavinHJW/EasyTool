@@ -1,7 +1,7 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
-import './App.css';
-import LikeButton from './components/LikeButton';
+import { MemoryRouter as Router, Routes, Route } from 'react-router-dom'
+import icon from '../../assets/icon.svg'
+import './App.css'
+import LikeButton from './components/LikeButton'
 
 function Root() {
 	return (
@@ -11,7 +11,7 @@ function Root() {
 			</div>
 			<LikeButton />
 		</div>
-	);
+	)
 }
 
 export default function App() {
@@ -21,5 +21,5 @@ export default function App() {
 				<Route path="/" element={<Root />} />
 			</Routes>
 		</Router>
-	);
+	)
 }
