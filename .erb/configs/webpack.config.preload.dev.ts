@@ -1,15 +1,15 @@
-import path from 'path';
-import webpack from 'webpack';
-import { merge } from 'webpack-merge';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import baseConfig from './webpack.config.base';
-import webpackPaths from './webpack.paths';
-import checkNodeEnv from '../scripts/check-node-env';
+import path from 'path'
+import webpack from 'webpack'
+import { merge } from 'webpack-merge'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import baseConfig from './webpack.config.base'
+import webpackPaths from './webpack.paths'
+import checkNodeEnv from '../scripts/check-node-env'
 
 // When an ESLint server is running, we can't set the NODE_ENV so we'll check if it's
 // at the dev webpack config is not accidentally run in a production environment
 if (process.env.NODE_ENV === 'production') {
-	checkNodeEnv('development');
+	checkNodeEnv('development')
 }
 
 const configuration: webpack.Configuration = {
@@ -67,6 +67,6 @@ const configuration: webpack.Configuration = {
 	},
 	// 这里设置Webpack是否监听文件变化，如果为true，Webpack会在文件发生变化时重新构建
 	watch: true,
-};
+}
 
-export default merge(baseConfig, configuration);
+export default merge(baseConfig, configuration)

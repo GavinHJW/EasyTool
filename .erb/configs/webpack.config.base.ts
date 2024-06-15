@@ -2,10 +2,10 @@
  * Base webpack config used across other specific configs
  */
 
-import webpack from 'webpack';
-import TsconfigPathsPlugins from 'tsconfig-paths-webpack-plugin';
-import webpackPaths from './webpack.paths';
-import { dependencies as externals } from '../../release/app/package.json';
+import webpack from 'webpack'
+import TsconfigPathsPlugins from 'tsconfig-paths-webpack-plugin'
+import webpackPaths from './webpack.paths'
+import { dependencies as externals } from '../../release/app/package.json'
 
 const configuration: webpack.Configuration = {
 	// Externals: 这里将项目的依赖项声明为外部依赖，以避免将它们打包到最终的构建文件中。它们将在运行时从环境中导入
@@ -56,6 +56,6 @@ const configuration: webpack.Configuration = {
 			NODE_ENV: 'production',
 		}),
 	],
-};
+}
 
-export default configuration;
+export default configuration

@@ -2,18 +2,18 @@
  * Webpack config for production electron main process
  */
 
-import path from 'path';
-import webpack from 'webpack';
-import { merge } from 'webpack-merge'; // 用于合并配置
-import TerserPlugin from 'terser-webpack-plugin'; // 用于压缩代码
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'; // 用于分析打包结果
-import baseConfig from './webpack.config.base';
-import webpackPaths from './webpack.paths';
-import checkNodeEnv from '../scripts/check-node-env';
-import deleteSourceMaps from '../scripts/delete-source-maps';
+import path from 'path'
+import webpack from 'webpack'
+import { merge } from 'webpack-merge' // 用于合并配置
+import TerserPlugin from 'terser-webpack-plugin' // 用于压缩代码
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer' // 用于分析打包结果
+import baseConfig from './webpack.config.base'
+import webpackPaths from './webpack.paths'
+import checkNodeEnv from '../scripts/check-node-env'
+import deleteSourceMaps from '../scripts/delete-source-maps'
 
-checkNodeEnv('production');
-deleteSourceMaps();
+checkNodeEnv('production')
+deleteSourceMaps()
 
 const configuration: webpack.Configuration = {
 	// 生成 source map 以便调试
@@ -82,6 +82,6 @@ const configuration: webpack.Configuration = {
 		__dirname: false,
 		__filename: false,
 	},
-};
+}
 // 使用 merge 函数将基础配置 baseConfig 和当前配置 configuration 合并，并导出
-export default merge(baseConfig, configuration);
+export default merge(baseConfig, configuration)
